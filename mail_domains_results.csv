@@ -1,0 +1,62 @@
+name,domain,mx,grade,dmarc_policy,dmarc_pct,dmarc_reporting,spf_mode,dkim_found,note,spf,dmarc
+Andrews,andrewsnc.gov,True,ENFORCED_QUARANTINE,quarantine,100,no,hardfail (-all),none of common selectors,,v=spf1 include:spf.protection.outlook.com -all,v=DMARC1; p=quarantine; pct=100
+Aurora,auroranc.org,True,NO_DMARC,NONE,,,softfail (~all),none of common selectors,,v=spf1 a mx include:websitewelcome.com ~all,
+Bethel,townofbethelnc.com,True,ENFORCED_QUARANTINE,quarantine,100,no,hardfail (-all),none of common selectors,,v=spf1 include:spf.protection.outlook.com -all,v=DMARC1; p=quarantine;
+Bridgeton,townofbridgeton.org,True,ENFORCED_QUARANTINE,quarantine,100,yes,softfail (~all),none of common selectors,,v=spf1 include:_spf-usg2.ppe-hosted.com include:secureserver.net ~all,v=DMARC1; p=quarantine; adkim=r; aspf=r; rua=mailto:dmarc_rua@onsecureserver.net;
+Carteret County Public Schools,carteretk12.org,True,NO_DMARC,NONE,,,softfail (~all),google,,v=spf1 include:mailgun.org include:_spf.google.com include:spf.gaggle.net ~all,
+Cedar Rock,wpcog.org,True,ENFORCED_QUARANTINE,quarantine,100,yes,hardfail (-all),selector1,,v=spf1 ip4:74.254.113.126 include:spf.protection.outlook.com include:spf.cloud.mip.com -all,v=DMARC1; p=quarantine; rua=mailto:dmarc@wpcog.org;
+Chapel Hill-Carrboro City Schools,chccs.k12.nc.us,True,ENFORCED_REJECT,reject,100,yes,LOOKUP_FAILED,none of common selectors,SPF lookup timed out (rerun to confirm),,v=DMARC1; p=reject; rua=mailto:v5txwlpr@ag.us.dmarcian.com; ruf=mailto:v5txwlpr@fr.us.dmarcian.com; fo=0:1:d:s; adkim=r; aspf=r;
+Clarkton,townofclarktonnc.com,True,NO_DMARC,NONE,,,hardfail (-all),none of common selectors,,v=spf1 include:spf.protection.outlook.com -all,
+Clayton,townofclaytonnc.org,True,MONITOR_ONLY,none,100,no,hardfail (-all),"selector2,k1",,v=spf1 IP4:24.106.195.146 IP4:64.28.200.66 IP4:70.62.99.2 ip4:172.99.114.23 include:amazonses.com include:spf.protection.outlook.com include:49643693.spf04.hubspotemail.net -all,v=DMARC1; p=none;
+Cleveland,clevelandnc.org,True,NO_DMARC,NONE,,,hardfail (-all),default,,v=spf1 include:spf.protection.outlook.com -all,
+Clyde,townofclyde.com,True,NO_DMARC,NONE,,,NONE,google,no SPF record either,,
+Danbury,townofdanbury1957.org,True,NO_DMARC,NONE,,,softfail (~all),none of common selectors,,v=spf1 include:_spf.twcbc.com ~all,
+Elk Park,townofelkpark.org,True,NO_DMARC,NONE,,,neutral (?all),none of common selectors,,v=spf1 ip4:66.96.128.0/18 include:websitewelcome.com ?all,
+Elon,elon.gov,True,ENFORCED_QUARANTINE,quarantine,100,yes,hardfail (-all),selector1,,v=spf1 ip4:96.10.149.66 include:spf.protection.outlook.com -all,v=DMARC1; p=quarantine; rua=mailto:dmarc@elon.gov; ruf=mailto:dmarc@elon.gov; pct=100
+Foxfire,foxfirenc.gov,True,MONITOR_ONLY,none,100,yes,hardfail (-all),none of common selectors,,v=spf1 include:spf.protection.outlook.com -all,v=DMARC1; p=none; rua=mailto:it@foxfirenc.gov
+Gates County Schools,gatescountyschools.net,True,NO_DMARC,NONE,,,softfail (~all),none of common selectors,,v=spf1 include:_spf.google.com ~all,
+Gibsonville,gibsonville.net,True,NO_DMARC,NONE,,,hardfail (-all),none of common selectors,,v=spf1 include:spf.protection.outlook.com -all,
+Granite Falls,granitefallsnc.com,True,NO_DMARC,NONE,,,hardfail (-all),none of common selectors,,v=spf1 include:spf.protection.outlook.com -all,
+Greene County Schools,greene.k12.nc.us,True,NO_DMARC,NONE,,,softfail (~all),none of common selectors,,v=spf1 include:spf.gaggle.net include:_spf.google.com ~all,
+Grover,townofgrovernc.com,True,NO_DMARC,NONE,,,neutral (?all),none of common selectors,,v=spf1 ip4:38.113.1.0/24 ip4:38.113.20.0/24 ip4:65.254.224.0/19 include:websitewelcome.com ?all,
+Hildebran,hildebrannc.org,True,NO_DMARC,NONE,,,softfail (~all),none of common selectors,,v=spf1 include:mfg.siteprotect.com ~all,
+Hobgood,hobgood.nc.gov,True,ENFORCED_REJECT,reject,100,yes,softfail (~all),none of common selectors,,v=spf1 include:%{ir}.%{v}.%{d}.spf.has.pphosted.com ~all,v=DMARC1; p=reject; fo=1; rua=mailto:dmarc_rua@emaildefense.proofpoint.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com;
+Jackson County Public Schools,jcpsmail.org,True,MONITOR_ONLY,none,100,no,LOOKUP_FAILED,"google,selector1",SPF lookup timed out (rerun to confirm),,v=DMARC1; p=none
+Lenoir,ci.lenoir.nc.us,True,MONITOR_ONLY,none,100,yes,hardfail (-all),none of common selectors,,v=spf1 ip4:71.5.109.230 ip4:152.19.146.0/24 ip4:208.77.171.17 ip4:208.77.171.2 include:spf.protection.outlook.com include:no-ip.com -all,v=DMARC1; p=none; rua=mailto:dmarc@ci.lenoir.nc.us; ruf=mailto:dmarc@ci.lenoir.nc.us; fo=1
+Lenoir County Public Schools,lenoir.k12.nc.us,True,MONITOR_ONLY,none,100,yes,LOOKUP_FAILED,google,SPF lookup timed out (rerun to confirm),,v=DMARC1; p=none; rua=mailto:dmarc@lenoir.k12.nc.us; pct=100
+Liberty,townoflibertync.org,True,NO_DMARC,NONE,,,softfail (~all),none of common selectors,,v=spf1 include:_spf.google.com ~all,
+Lincolnton,lincolntonnc.org,True,MONITOR_ONLY,none,100,yes,softfail (~all),google,,v=spf1 include:dc-aa8e722993._spfm.lincolntonnc.org ~all,v=DMARC1; p=none; rua=mailto:dmarc@lincolntonnc.org ; pct=100; adkim=s; aspf=s
+Locust,locustnc.gov,True,NO_DMARC,NONE,,,hardfail (-all),none of common selectors,,v=spf1 include:spf.protection.outlook.com -all,
+Lucama,townoflucama.net,True,ENFORCED_REJECT,reject,100,yes,hardfail (-all),none of common selectors,,v=spf1 include:_spf.prod.hydra.sophos.com -all,v=DMARC1; p=reject; rua=mailto:abuse@townoflucama.net; ruf=mailto:abuse@townoflucama.net; fo=1; adkim=s; aspf=s; pct=100; rf=afrf; ri=86400; sp=reject
+Lumberton,ci.lumberton.nc.us,True,NO_DMARC,NONE,,,hardfail (-all),none of common selectors,,v=spf1 a:spf.protection.outlook.com ip4:208.80.200.4/21 include:spf.protection.outlook.com -all,
+Magnolia,magnoliatownhall.com,True,NO_DMARC,NONE,,,hardfail (-all),none of common selectors,,v=spf1 include:spf.protection.outlook.com -all,
+Maiden,maidennc.gov,True,NO_DMARC,NONE,,,hardfail (-all),"selector1,default",,v=spf1 include:spf.protection.outlook.com a:dispatch-us.ppe-hosted.com -all,
+Mayodan,mayodannc.org,True,ENFORCED_REJECT,reject,100,yes,hardfail (-all),none of common selectors,,v=spf1 include:spf.protection.outlook.com -all,v=DMARC1; p=reject; pct=100; rua=mailto:dmarc@biznetplus.com
+Mebane,cityofmebane.com,True,ENFORCED_QUARANTINE,quarantine,100,yes,hardfail (-all),"selector1,selector2",,v=spf1 include:spf.protection.outlook.com include:spf.ess.barracudanetworks.com include:cityofmebane-com.spf.smtp25.com -all,v=DMARC1; p=quarantine; rua=mailto:dmarc@cityofmebane.com; ruf=mailto:dmarc@cityofmebane.com; fo=1; pct=100
+Micro,townofmicro.com,True,ENFORCED_REJECT,reject,100,yes,softfail (~all),none of common selectors,,v=spf1 a:dispatch-us.ppe-hosted.com include:spf.protection.outlook.com ~all,v=DMARC1; p=reject; rua=mailto:abuse@townofmicro.com; ruf=mailto:abuse@townofmicro.com; fo=1; adkim=s; aspf=s; pct=100; rf=afrf; ri=86400; sp=reject
+Mint Hill,minthill.com,True,NO_DMARC,NONE,,,hardfail (-all),none of common selectors,,v=spf1 include:spf.protection.outlook.com include:turbo-smtp.com -all,
+Mitchell County Schools,mhslive.net,True,NO_DMARC,NONE,,,MULTIPLE (invalid),"google,s1,s2",,v=spf1 include:_spf.google.com ~all,
+Mount Olive,townofmountolivenc.com,True,MONITOR_ONLY,none,100,yes,hardfail (-all),selector2,,v=spf1 ip4:96.10.228.226 ip4:24.171.184.154 ip4:23.116.112.145 include:spf.protection.outlook.com -all,v=DMARC1; p=none; rua=mailto:c9b6e3e23339417@rep.dmarcanalyzer.com; sp=none
+Mount Pleasant,mtpleasantnc.us,True,NO_DMARC,NONE,,,hardfail (-all),"selector1,selector2",,v=spf1 include:spf.protection.outlook.com -all,
+Norlina,townofnorlina.com,True,NO_DMARC,NONE,,,softfail (~all),default,,v=spf1 ip4:181.214.31.82 include:spf.antispamcloud.com include:relay.mailchannels.net +a +mx mx include:spf.protection.outlook.com ~all,
+Norwood,norwoodnc.gov,True,ENFORCED_REJECT,reject,100,yes,hardfail (-all),none of common selectors,,v=spf1 include:spf.protection.outlook.com include:_spf-us.ppe-hosted.com include:_spf.psm.knowbe4.com -all,v=DMARC1; p=reject; adkim=r; aspf=r; rua=mailto:dmarc_rua@onsecureserver.net;
+Old Fort,oldfortnc.com,True,NO_DMARC,NONE,,,hardfail (-all),none of common selectors,,v=spf1 include:secureserver.net -all,
+Ranlo,townofranlo.org,True,MONITOR_ONLY,none,100,yes,softfail (~all),default,,v=spf1 ip4:67.222.28.34 +a +mx +ip4:67.222.25.25 +ip4:67.222.26.63 +ip4:67.43.13.70 include:_spf.smtp.com ~all,v=DMARC1; p=none; rua=mailto:david@davidturnerdesigns.com
+Rosman,comporium.net,True,ENFORCED_QUARANTINE,quarantine,100,yes,softfail (~all),"s1,s2",,v=spf1 mx a ip4:66.219.31.1 include:spf1.neonova.net include:spf.syn-alias.com ~all,v=DMARC1; p=quarantine; rua=mailto:dmarc@comporium.net; adkim=r; aspf=r; pct=100
+Rowland,townofrowland.com,True,NO_DMARC,NONE,,,hardfail (-all),none of common selectors,,v=spf1 include:spf.protection.outlook.com -all,
+Sawmills,townofsawmillsnc.com,True,NO_DMARC,NONE,,,hardfail (-all),none of common selectors,,v=spf1 include:spf.protection.outlook.com -all,
+Shallotte,tosgov.org,True,ENFORCED_QUARANTINE,quarantine,100,yes,hardfail (-all),none of common selectors,,v=spf1 include:spf.em.secureserver.net include:spf.protection.outlook.com -all,v=DMARC1; p=quarantine; adkim=r; aspf=r; rua=mailto:dmarc_rua@onsecureserver.net;
+Siler City,silercity.org,True,MONITOR_ONLY,none,100,no,softfail (~all),selector1,,v=spf1 ip4:75.137.62.106 include:spf.protection.outlook.com include:_spf-us.ppe-hosted.com ~all,v=DMARC1; p=none
+St. James,stjames.town,True,MONITOR_ONLY,none,100,no,hardfail (-all),"selector1,s2",,v=spf1 include:spf.protection.outlook.com -all,v=DMARC1; p=none;
+Stanfield,stanfieldnc.com,True,NO_DMARC,NONE,,,softfail (~all),none of common selectors,,v=spf1 include:spf.registeredsite.com include:spf.cloudus.oxcs.net ~all,
+Swansboro,ci.swansboro.nc.us,True,NO_DMARC,NONE,,,hardfail (-all),selector1,,v=spf1 include:spf.protection.outlook.com -all,
+Tabor City,taborcity.org,True,NO_DMARC,NONE,,,hardfail (-all),selector1,,v=spf1 include:spf.protection.outlook.com -all,
+Trenton,darlenespivey.com,True,NO_DMARC,NONE,,,hardfail (-all),none of common selectors,,v=spf1 include:secureserver.net -all,
+Tyrrell County Schools,tycomail.net,True,ENFORCED_QUARANTINE,quarantine,100,yes,hardfail (-all),google,,v=spf1 include:_spf.google.com -all,v=DMARC1; p=quarantine; adkim=s; aspf=s; pct=100; rua=mailto:dmarc-report@tycomail.net
+Valdese,ci.valdese.nc.us,False,NO_DMARC,NONE,,,NONE,none of common selectors,no SPF record either,,
+Vass,townofvass.com,True,MONITOR_ONLY,none,100,yes,hardfail (-all),none of common selectors,,v=spf1 include:spf.protection.outlook.com -all,v=DMARC1;p=none;rua=mailto:f995dcab26@rua.easydmarc.us;ruf=mailto:f995dcab26@ruf.easydmarc.us;fo=1;
+Wagram,townofwagram.gov,True,ENFORCED_REJECT,reject,100,yes,hardfail (-all),none of common selectors,,v=spf1 include:_spf.prod.hydra.sophos.com include:spf.protection.outlook.com -all,v=DMARC1; p=reject; rua=mailto:abuse@townofwagram.gov; ruf=mailto:abuse@townofwagram.gov; fo=1; adkim=s; aspf=s; pct=100; rf=afrf; ri=86400; sp=reject
+Weldon City Schools,weldonk12.org,True,NO_DMARC,NONE,,,NONE,none of common selectors,no SPF record either,,
+Whiteville,ci.whiteville.nc.us,True,ENFORCED_QUARANTINE,quarantine,100,no,hardfail (-all),selector2,,v=spf1 ip4:70.63.175.102 ip4:70.63.174.90 ip4:70.63.207.222 ip4:70.63.206.130 ip4:69.16.254.23 include:spf.protection.outlook.com -all,v=DMARC1; p=quarantine
+Woodland,mchsi.com,True,MONITOR_ONLY,none,0,yes,softfail (~all),none of common selectors,,v=spf1 mx include:_spf1.mchsi.com include:_spf2.mchsi.com include:_spf3.mchsi.com include:_spf4.mchsi.com ~all,v=DMARC1; p=none; rua=mailto:dmarc-reports@mediacombb.net; fo=1; adkim=r; aspf=r; pct=0; sp=none
+Wrightsville Beach,towb.org,True,MONITOR_ONLY,none,100,no,hardfail (-all),selector1,,v=spf1 ip4:98.101.196.240/29 include:spf.protection.outlook.com -all,v=DMARC1; p=none;

@@ -1,0 +1,763 @@
+DNS records to fix each unprotected domain.
+Start at Step 1 (p=none). Never jump straight to p=reject on a domain
+that has never had DMARC — legitimate mail from unlisted senders will bounce.
+
+=== alleghany.k12.nc.us ===
+Step 1 (today, safe, breaks nothing) — turn on monitoring:
+  Host:  _dmarc.alleghany.k12.nc.us
+  Type:  TXT
+  Value: v=DMARC1; p=none; rua=mailto:dmarc-reports@alleghany.k12.nc.us; fo=1
+
+Step 2 (after 2-4 weeks of reading reports, once all legitimate senders pass):
+  Value: v=DMARC1; p=quarantine; pct=100; rua=mailto:dmarc-reports@alleghany.k12.nc.us; fo=1
+
+Step 3 (final, recommended by CISA for government domains):
+  Value: v=DMARC1; p=reject; pct=100; rua=mailto:dmarc-reports@alleghany.k12.nc.us; fo=1
+
+If there is no SPF record, add one listing your real mail servers, for example
+for Google Workspace:
+  Host:  alleghany.k12.nc.us
+  Type:  TXT
+  Value: v=spf1 include:_spf.google.com -all
+(replace the include with your actual provider — Microsoft 365 is include:spf.protection.outlook.com)
+
+=== beaufort.k12.nc.us ===
+Step 1 (today, safe, breaks nothing) — turn on monitoring:
+  Host:  _dmarc.beaufort.k12.nc.us
+  Type:  TXT
+  Value: v=DMARC1; p=none; rua=mailto:dmarc-reports@beaufort.k12.nc.us; fo=1
+
+Step 2 (after 2-4 weeks of reading reports, once all legitimate senders pass):
+  Value: v=DMARC1; p=quarantine; pct=100; rua=mailto:dmarc-reports@beaufort.k12.nc.us; fo=1
+
+Step 3 (final, recommended by CISA for government domains):
+  Value: v=DMARC1; p=reject; pct=100; rua=mailto:dmarc-reports@beaufort.k12.nc.us; fo=1
+
+If there is no SPF record, add one listing your real mail servers, for example
+for Google Workspace:
+  Host:  beaufort.k12.nc.us
+  Type:  TXT
+  Value: v=spf1 include:_spf.google.com -all
+(replace the include with your actual provider — Microsoft 365 is include:spf.protection.outlook.com)
+
+=== bertie.k12.nc.us ===
+Step 1 (today, safe, breaks nothing) — turn on monitoring:
+  Host:  _dmarc.bertie.k12.nc.us
+  Type:  TXT
+  Value: v=DMARC1; p=none; rua=mailto:dmarc-reports@bertie.k12.nc.us; fo=1
+
+Step 2 (after 2-4 weeks of reading reports, once all legitimate senders pass):
+  Value: v=DMARC1; p=quarantine; pct=100; rua=mailto:dmarc-reports@bertie.k12.nc.us; fo=1
+
+Step 3 (final, recommended by CISA for government domains):
+  Value: v=DMARC1; p=reject; pct=100; rua=mailto:dmarc-reports@bertie.k12.nc.us; fo=1
+
+If there is no SPF record, add one listing your real mail servers, for example
+for Google Workspace:
+  Host:  bertie.k12.nc.us
+  Type:  TXT
+  Value: v=spf1 include:_spf.google.com -all
+(replace the include with your actual provider — Microsoft 365 is include:spf.protection.outlook.com)
+
+=== bcsemail.org ===
+Step 1 (today, safe, breaks nothing) — turn on monitoring:
+  Host:  _dmarc.bcsemail.org
+  Type:  TXT
+  Value: v=DMARC1; p=none; rua=mailto:dmarc-reports@bcsemail.org; fo=1
+
+Step 2 (after 2-4 weeks of reading reports, once all legitimate senders pass):
+  Value: v=DMARC1; p=quarantine; pct=100; rua=mailto:dmarc-reports@bcsemail.org; fo=1
+
+Step 3 (final, recommended by CISA for government domains):
+  Value: v=DMARC1; p=reject; pct=100; rua=mailto:dmarc-reports@bcsemail.org; fo=1
+
+If there is no SPF record, add one listing your real mail servers, for example
+for Google Workspace:
+  Host:  bcsemail.org
+  Type:  TXT
+  Value: v=spf1 include:_spf.google.com -all
+(replace the include with your actual provider — Microsoft 365 is include:spf.protection.outlook.com)
+
+=== cabarrus.k12.nc.us ===
+Step 1 (today, safe, breaks nothing) — turn on monitoring:
+  Host:  _dmarc.cabarrus.k12.nc.us
+  Type:  TXT
+  Value: v=DMARC1; p=none; rua=mailto:dmarc-reports@cabarrus.k12.nc.us; fo=1
+
+Step 2 (after 2-4 weeks of reading reports, once all legitimate senders pass):
+  Value: v=DMARC1; p=quarantine; pct=100; rua=mailto:dmarc-reports@cabarrus.k12.nc.us; fo=1
+
+Step 3 (final, recommended by CISA for government domains):
+  Value: v=DMARC1; p=reject; pct=100; rua=mailto:dmarc-reports@cabarrus.k12.nc.us; fo=1
+
+If there is no SPF record, add one listing your real mail servers, for example
+for Google Workspace:
+  Host:  cabarrus.k12.nc.us
+  Type:  TXT
+  Value: v=spf1 include:_spf.google.com -all
+(replace the include with your actual provider — Microsoft 365 is include:spf.protection.outlook.com)
+
+=== carteretcountyschools.org ===
+Step 1 (today, safe, breaks nothing) — turn on monitoring:
+  Host:  _dmarc.carteretcountyschools.org
+  Type:  TXT
+  Value: v=DMARC1; p=none; rua=mailto:dmarc-reports@carteretcountyschools.org; fo=1
+
+Step 2 (after 2-4 weeks of reading reports, once all legitimate senders pass):
+  Value: v=DMARC1; p=quarantine; pct=100; rua=mailto:dmarc-reports@carteretcountyschools.org; fo=1
+
+Step 3 (final, recommended by CISA for government domains):
+  Value: v=DMARC1; p=reject; pct=100; rua=mailto:dmarc-reports@carteretcountyschools.org; fo=1
+
+If there is no SPF record, add one listing your real mail servers, for example
+for Google Workspace:
+  Host:  carteretcountyschools.org
+  Type:  TXT
+  Value: v=spf1 include:_spf.google.com -all
+(replace the include with your actual provider — Microsoft 365 is include:spf.protection.outlook.com)
+
+=== caswell.k12.nc.us ===
+Step 1 (today, safe, breaks nothing) — turn on monitoring:
+  Host:  _dmarc.caswell.k12.nc.us
+  Type:  TXT
+  Value: v=DMARC1; p=none; rua=mailto:dmarc-reports@caswell.k12.nc.us; fo=1
+
+Step 2 (after 2-4 weeks of reading reports, once all legitimate senders pass):
+  Value: v=DMARC1; p=quarantine; pct=100; rua=mailto:dmarc-reports@caswell.k12.nc.us; fo=1
+
+Step 3 (final, recommended by CISA for government domains):
+  Value: v=DMARC1; p=reject; pct=100; rua=mailto:dmarc-reports@caswell.k12.nc.us; fo=1
+
+If there is no SPF record, add one listing your real mail servers, for example
+for Google Workspace:
+  Host:  caswell.k12.nc.us
+  Type:  TXT
+  Value: v=spf1 include:_spf.google.com -all
+(replace the include with your actual provider — Microsoft 365 is include:spf.protection.outlook.com)
+
+=== chccs.org ===
+Step 1 (today, safe, breaks nothing) — turn on monitoring:
+  Host:  _dmarc.chccs.org
+  Type:  TXT
+  Value: v=DMARC1; p=none; rua=mailto:dmarc-reports@chccs.org; fo=1
+
+Step 2 (after 2-4 weeks of reading reports, once all legitimate senders pass):
+  Value: v=DMARC1; p=quarantine; pct=100; rua=mailto:dmarc-reports@chccs.org; fo=1
+
+Step 3 (final, recommended by CISA for government domains):
+  Value: v=DMARC1; p=reject; pct=100; rua=mailto:dmarc-reports@chccs.org; fo=1
+
+If there is no SPF record, add one listing your real mail servers, for example
+for Google Workspace:
+  Host:  chccs.org
+  Type:  TXT
+  Value: v=spf1 include:_spf.google.com -all
+(replace the include with your actual provider — Microsoft 365 is include:spf.protection.outlook.com)
+
+=== davidson.k12.nc.us ===
+Step 1 (today, safe, breaks nothing) — turn on monitoring:
+  Host:  _dmarc.davidson.k12.nc.us
+  Type:  TXT
+  Value: v=DMARC1; p=none; rua=mailto:dmarc-reports@davidson.k12.nc.us; fo=1
+
+Step 2 (after 2-4 weeks of reading reports, once all legitimate senders pass):
+  Value: v=DMARC1; p=quarantine; pct=100; rua=mailto:dmarc-reports@davidson.k12.nc.us; fo=1
+
+Step 3 (final, recommended by CISA for government domains):
+  Value: v=DMARC1; p=reject; pct=100; rua=mailto:dmarc-reports@davidson.k12.nc.us; fo=1
+
+If there is no SPF record, add one listing your real mail servers, for example
+for Google Workspace:
+  Host:  davidson.k12.nc.us
+  Type:  TXT
+  Value: v=spf1 include:_spf.google.com -all
+(replace the include with your actual provider — Microsoft 365 is include:spf.protection.outlook.com)
+
+=== davie.k12.nc.us ===
+Step 1 (today, safe, breaks nothing) — turn on monitoring:
+  Host:  _dmarc.davie.k12.nc.us
+  Type:  TXT
+  Value: v=DMARC1; p=none; rua=mailto:dmarc-reports@davie.k12.nc.us; fo=1
+
+Step 2 (after 2-4 weeks of reading reports, once all legitimate senders pass):
+  Value: v=DMARC1; p=quarantine; pct=100; rua=mailto:dmarc-reports@davie.k12.nc.us; fo=1
+
+Step 3 (final, recommended by CISA for government domains):
+  Value: v=DMARC1; p=reject; pct=100; rua=mailto:dmarc-reports@davie.k12.nc.us; fo=1
+
+If there is no SPF record, add one listing your real mail servers, for example
+for Google Workspace:
+  Host:  davie.k12.nc.us
+  Type:  TXT
+  Value: v=spf1 include:_spf.google.com -all
+(replace the include with your actual provider — Microsoft 365 is include:spf.protection.outlook.com)
+
+=== dpsnc.net ===
+Step 1 (today, safe, breaks nothing) — turn on monitoring:
+  Host:  _dmarc.dpsnc.net
+  Type:  TXT
+  Value: v=DMARC1; p=none; rua=mailto:dmarc-reports@dpsnc.net; fo=1
+
+Step 2 (after 2-4 weeks of reading reports, once all legitimate senders pass):
+  Value: v=DMARC1; p=quarantine; pct=100; rua=mailto:dmarc-reports@dpsnc.net; fo=1
+
+Step 3 (final, recommended by CISA for government domains):
+  Value: v=DMARC1; p=reject; pct=100; rua=mailto:dmarc-reports@dpsnc.net; fo=1
+
+If there is no SPF record, add one listing your real mail servers, for example
+for Google Workspace:
+  Host:  dpsnc.net
+  Type:  TXT
+  Value: v=spf1 include:_spf.google.com -all
+(replace the include with your actual provider — Microsoft 365 is include:spf.protection.outlook.com)
+
+=== ecps.us ===
+Step 1 (today, safe, breaks nothing) — turn on monitoring:
+  Host:  _dmarc.ecps.us
+  Type:  TXT
+  Value: v=DMARC1; p=none; rua=mailto:dmarc-reports@ecps.us; fo=1
+
+Step 2 (after 2-4 weeks of reading reports, once all legitimate senders pass):
+  Value: v=DMARC1; p=quarantine; pct=100; rua=mailto:dmarc-reports@ecps.us; fo=1
+
+Step 3 (final, recommended by CISA for government domains):
+  Value: v=DMARC1; p=reject; pct=100; rua=mailto:dmarc-reports@ecps.us; fo=1
+
+If there is no SPF record, add one listing your real mail servers, for example
+for Google Workspace:
+  Host:  ecps.us
+  Type:  TXT
+  Value: v=spf1 include:_spf.google.com -all
+(replace the include with your actual provider — Microsoft 365 is include:spf.protection.outlook.com)
+
+=== ecpps.k12.nc.us ===
+Step 1 (today, safe, breaks nothing) — turn on monitoring:
+  Host:  _dmarc.ecpps.k12.nc.us
+  Type:  TXT
+  Value: v=DMARC1; p=none; rua=mailto:dmarc-reports@ecpps.k12.nc.us; fo=1
+
+Step 2 (after 2-4 weeks of reading reports, once all legitimate senders pass):
+  Value: v=DMARC1; p=quarantine; pct=100; rua=mailto:dmarc-reports@ecpps.k12.nc.us; fo=1
+
+Step 3 (final, recommended by CISA for government domains):
+  Value: v=DMARC1; p=reject; pct=100; rua=mailto:dmarc-reports@ecpps.k12.nc.us; fo=1
+
+If there is no SPF record, add one listing your real mail servers, for example
+for Google Workspace:
+  Host:  ecpps.k12.nc.us
+  Type:  TXT
+  Value: v=spf1 include:_spf.google.com -all
+(replace the include with your actual provider — Microsoft 365 is include:spf.protection.outlook.com)
+
+=== elkin.k12.nc.us ===
+Step 1 (today, safe, breaks nothing) — turn on monitoring:
+  Host:  _dmarc.elkin.k12.nc.us
+  Type:  TXT
+  Value: v=DMARC1; p=none; rua=mailto:dmarc-reports@elkin.k12.nc.us; fo=1
+
+Step 2 (after 2-4 weeks of reading reports, once all legitimate senders pass):
+  Value: v=DMARC1; p=quarantine; pct=100; rua=mailto:dmarc-reports@elkin.k12.nc.us; fo=1
+
+Step 3 (final, recommended by CISA for government domains):
+  Value: v=DMARC1; p=reject; pct=100; rua=mailto:dmarc-reports@elkin.k12.nc.us; fo=1
+
+If there is no SPF record, add one listing your real mail servers, for example
+for Google Workspace:
+  Host:  elkin.k12.nc.us
+  Type:  TXT
+  Value: v=spf1 include:_spf.google.com -all
+(replace the include with your actual provider — Microsoft 365 is include:spf.protection.outlook.com)
+
+=== gaston.k12.nc.us ===
+Step 1 (today, safe, breaks nothing) — turn on monitoring:
+  Host:  _dmarc.gaston.k12.nc.us
+  Type:  TXT
+  Value: v=DMARC1; p=none; rua=mailto:dmarc-reports@gaston.k12.nc.us; fo=1
+
+Step 2 (after 2-4 weeks of reading reports, once all legitimate senders pass):
+  Value: v=DMARC1; p=quarantine; pct=100; rua=mailto:dmarc-reports@gaston.k12.nc.us; fo=1
+
+Step 3 (final, recommended by CISA for government domains):
+  Value: v=DMARC1; p=reject; pct=100; rua=mailto:dmarc-reports@gaston.k12.nc.us; fo=1
+
+If there is no SPF record, add one listing your real mail servers, for example
+for Google Workspace:
+  Host:  gaston.k12.nc.us
+  Type:  TXT
+  Value: v=spf1 include:_spf.google.com -all
+(replace the include with your actual provider — Microsoft 365 is include:spf.protection.outlook.com)
+
+=== gates.k12.nc.us ===
+Step 1 (today, safe, breaks nothing) — turn on monitoring:
+  Host:  _dmarc.gates.k12.nc.us
+  Type:  TXT
+  Value: v=DMARC1; p=none; rua=mailto:dmarc-reports@gates.k12.nc.us; fo=1
+
+Step 2 (after 2-4 weeks of reading reports, once all legitimate senders pass):
+  Value: v=DMARC1; p=quarantine; pct=100; rua=mailto:dmarc-reports@gates.k12.nc.us; fo=1
+
+Step 3 (final, recommended by CISA for government domains):
+  Value: v=DMARC1; p=reject; pct=100; rua=mailto:dmarc-reports@gates.k12.nc.us; fo=1
+
+If there is no SPF record, add one listing your real mail servers, for example
+for Google Workspace:
+  Host:  gates.k12.nc.us
+  Type:  TXT
+  Value: v=spf1 include:_spf.google.com -all
+(replace the include with your actual provider — Microsoft 365 is include:spf.protection.outlook.com)
+
+=== graham.k12.nc.us ===
+Step 1 (today, safe, breaks nothing) — turn on monitoring:
+  Host:  _dmarc.graham.k12.nc.us
+  Type:  TXT
+  Value: v=DMARC1; p=none; rua=mailto:dmarc-reports@graham.k12.nc.us; fo=1
+
+Step 2 (after 2-4 weeks of reading reports, once all legitimate senders pass):
+  Value: v=DMARC1; p=quarantine; pct=100; rua=mailto:dmarc-reports@graham.k12.nc.us; fo=1
+
+Step 3 (final, recommended by CISA for government domains):
+  Value: v=DMARC1; p=reject; pct=100; rua=mailto:dmarc-reports@graham.k12.nc.us; fo=1
+
+If there is no SPF record, add one listing your real mail servers, for example
+for Google Workspace:
+  Host:  graham.k12.nc.us
+  Type:  TXT
+  Value: v=spf1 include:_spf.google.com -all
+(replace the include with your actual provider — Microsoft 365 is include:spf.protection.outlook.com)
+
+=== gcsedu.org ===
+Step 1 (today, safe, breaks nothing) — turn on monitoring:
+  Host:  _dmarc.gcsedu.org
+  Type:  TXT
+  Value: v=DMARC1; p=none; rua=mailto:dmarc-reports@gcsedu.org; fo=1
+
+Step 2 (after 2-4 weeks of reading reports, once all legitimate senders pass):
+  Value: v=DMARC1; p=quarantine; pct=100; rua=mailto:dmarc-reports@gcsedu.org; fo=1
+
+Step 3 (final, recommended by CISA for government domains):
+  Value: v=DMARC1; p=reject; pct=100; rua=mailto:dmarc-reports@gcsedu.org; fo=1
+
+If there is no SPF record, add one listing your real mail servers, for example
+for Google Workspace:
+  Host:  gcsedu.org
+  Type:  TXT
+  Value: v=spf1 include:_spf.google.com -all
+(replace the include with your actual provider — Microsoft 365 is include:spf.protection.outlook.com)
+
+=== gcsnc.com ===
+Step 1 (today, safe, breaks nothing) — turn on monitoring:
+  Host:  _dmarc.gcsnc.com
+  Type:  TXT
+  Value: v=DMARC1; p=none; rua=mailto:dmarc-reports@gcsnc.com; fo=1
+
+Step 2 (after 2-4 weeks of reading reports, once all legitimate senders pass):
+  Value: v=DMARC1; p=quarantine; pct=100; rua=mailto:dmarc-reports@gcsnc.com; fo=1
+
+Step 3 (final, recommended by CISA for government domains):
+  Value: v=DMARC1; p=reject; pct=100; rua=mailto:dmarc-reports@gcsnc.com; fo=1
+
+If there is no SPF record, add one listing your real mail servers, for example
+for Google Workspace:
+  Host:  gcsnc.com
+  Type:  TXT
+  Value: v=spf1 include:_spf.google.com -all
+(replace the include with your actual provider — Microsoft 365 is include:spf.protection.outlook.com)
+
+=== jcpsnc.org ===
+Step 1 (today, safe, breaks nothing) — turn on monitoring:
+  Host:  _dmarc.jcpsnc.org
+  Type:  TXT
+  Value: v=DMARC1; p=none; rua=mailto:dmarc-reports@jcpsnc.org; fo=1
+
+Step 2 (after 2-4 weeks of reading reports, once all legitimate senders pass):
+  Value: v=DMARC1; p=quarantine; pct=100; rua=mailto:dmarc-reports@jcpsnc.org; fo=1
+
+Step 3 (final, recommended by CISA for government domains):
+  Value: v=DMARC1; p=reject; pct=100; rua=mailto:dmarc-reports@jcpsnc.org; fo=1
+
+If there is no SPF record, add one listing your real mail servers, for example
+for Google Workspace:
+  Host:  jcpsnc.org
+  Type:  TXT
+  Value: v=spf1 include:_spf.google.com -all
+(replace the include with your actual provider — Microsoft 365 is include:spf.protection.outlook.com)
+
+=== lcpsnc.org ===
+Step 1 (today, safe, breaks nothing) — turn on monitoring:
+  Host:  _dmarc.lcpsnc.org
+  Type:  TXT
+  Value: v=DMARC1; p=none; rua=mailto:dmarc-reports@lcpsnc.org; fo=1
+
+Step 2 (after 2-4 weeks of reading reports, once all legitimate senders pass):
+  Value: v=DMARC1; p=quarantine; pct=100; rua=mailto:dmarc-reports@lcpsnc.org; fo=1
+
+Step 3 (final, recommended by CISA for government domains):
+  Value: v=DMARC1; p=reject; pct=100; rua=mailto:dmarc-reports@lcpsnc.org; fo=1
+
+If there is no SPF record, add one listing your real mail servers, for example
+for Google Workspace:
+  Host:  lcpsnc.org
+  Type:  TXT
+  Value: v=spf1 include:_spf.google.com -all
+(replace the include with your actual provider — Microsoft 365 is include:spf.protection.outlook.com)
+
+=== lincoln.k12.nc.us ===
+Step 1 (today, safe, breaks nothing) — turn on monitoring:
+  Host:  _dmarc.lincoln.k12.nc.us
+  Type:  TXT
+  Value: v=DMARC1; p=none; rua=mailto:dmarc-reports@lincoln.k12.nc.us; fo=1
+
+Step 2 (after 2-4 weeks of reading reports, once all legitimate senders pass):
+  Value: v=DMARC1; p=quarantine; pct=100; rua=mailto:dmarc-reports@lincoln.k12.nc.us; fo=1
+
+Step 3 (final, recommended by CISA for government domains):
+  Value: v=DMARC1; p=reject; pct=100; rua=mailto:dmarc-reports@lincoln.k12.nc.us; fo=1
+
+If there is no SPF record, add one listing your real mail servers, for example
+for Google Workspace:
+  Host:  lincoln.k12.nc.us
+  Type:  TXT
+  Value: v=spf1 include:_spf.google.com -all
+(replace the include with your actual provider — Microsoft 365 is include:spf.protection.outlook.com)
+
+=== macon.k12.nc.us ===
+Step 1 (today, safe, breaks nothing) — turn on monitoring:
+  Host:  _dmarc.macon.k12.nc.us
+  Type:  TXT
+  Value: v=DMARC1; p=none; rua=mailto:dmarc-reports@macon.k12.nc.us; fo=1
+
+Step 2 (after 2-4 weeks of reading reports, once all legitimate senders pass):
+  Value: v=DMARC1; p=quarantine; pct=100; rua=mailto:dmarc-reports@macon.k12.nc.us; fo=1
+
+Step 3 (final, recommended by CISA for government domains):
+  Value: v=DMARC1; p=reject; pct=100; rua=mailto:dmarc-reports@macon.k12.nc.us; fo=1
+
+If there is no SPF record, add one listing your real mail servers, for example
+for Google Workspace:
+  Host:  macon.k12.nc.us
+  Type:  TXT
+  Value: v=spf1 include:_spf.google.com -all
+(replace the include with your actual provider — Microsoft 365 is include:spf.protection.outlook.com)
+
+=== martin.k12.nc.us ===
+Step 1 (today, safe, breaks nothing) — turn on monitoring:
+  Host:  _dmarc.martin.k12.nc.us
+  Type:  TXT
+  Value: v=DMARC1; p=none; rua=mailto:dmarc-reports@martin.k12.nc.us; fo=1
+
+Step 2 (after 2-4 weeks of reading reports, once all legitimate senders pass):
+  Value: v=DMARC1; p=quarantine; pct=100; rua=mailto:dmarc-reports@martin.k12.nc.us; fo=1
+
+Step 3 (final, recommended by CISA for government domains):
+  Value: v=DMARC1; p=reject; pct=100; rua=mailto:dmarc-reports@martin.k12.nc.us; fo=1
+
+If there is no SPF record, add one listing your real mail servers, for example
+for Google Workspace:
+  Host:  martin.k12.nc.us
+  Type:  TXT
+  Value: v=spf1 include:_spf.google.com -all
+(replace the include with your actual provider — Microsoft 365 is include:spf.protection.outlook.com)
+
+=== mcsnc.org ===
+Step 1 (today, safe, breaks nothing) — turn on monitoring:
+  Host:  _dmarc.mcsnc.org
+  Type:  TXT
+  Value: v=DMARC1; p=none; rua=mailto:dmarc-reports@mcsnc.org; fo=1
+
+Step 2 (after 2-4 weeks of reading reports, once all legitimate senders pass):
+  Value: v=DMARC1; p=quarantine; pct=100; rua=mailto:dmarc-reports@mcsnc.org; fo=1
+
+Step 3 (final, recommended by CISA for government domains):
+  Value: v=DMARC1; p=reject; pct=100; rua=mailto:dmarc-reports@mcsnc.org; fo=1
+
+If there is no SPF record, add one listing your real mail servers, for example
+for Google Workspace:
+  Host:  mcsnc.org
+  Type:  TXT
+  Value: v=spf1 include:_spf.google.com -all
+(replace the include with your actual provider — Microsoft 365 is include:spf.protection.outlook.com)
+
+=== montgomery.k12.nc.us ===
+Step 1 (today, safe, breaks nothing) — turn on monitoring:
+  Host:  _dmarc.montgomery.k12.nc.us
+  Type:  TXT
+  Value: v=DMARC1; p=none; rua=mailto:dmarc-reports@montgomery.k12.nc.us; fo=1
+
+Step 2 (after 2-4 weeks of reading reports, once all legitimate senders pass):
+  Value: v=DMARC1; p=quarantine; pct=100; rua=mailto:dmarc-reports@montgomery.k12.nc.us; fo=1
+
+Step 3 (final, recommended by CISA for government domains):
+  Value: v=DMARC1; p=reject; pct=100; rua=mailto:dmarc-reports@montgomery.k12.nc.us; fo=1
+
+If there is no SPF record, add one listing your real mail servers, for example
+for Google Workspace:
+  Host:  montgomery.k12.nc.us
+  Type:  TXT
+  Value: v=spf1 include:_spf.google.com -all
+(replace the include with your actual provider — Microsoft 365 is include:spf.protection.outlook.com)
+
+=== mtairy.k12.nc.us ===
+Step 1 (today, safe, breaks nothing) — turn on monitoring:
+  Host:  _dmarc.mtairy.k12.nc.us
+  Type:  TXT
+  Value: v=DMARC1; p=none; rua=mailto:dmarc-reports@mtairy.k12.nc.us; fo=1
+
+Step 2 (after 2-4 weeks of reading reports, once all legitimate senders pass):
+  Value: v=DMARC1; p=quarantine; pct=100; rua=mailto:dmarc-reports@mtairy.k12.nc.us; fo=1
+
+Step 3 (final, recommended by CISA for government domains):
+  Value: v=DMARC1; p=reject; pct=100; rua=mailto:dmarc-reports@mtairy.k12.nc.us; fo=1
+
+If there is no SPF record, add one listing your real mail servers, for example
+for Google Workspace:
+  Host:  mtairy.k12.nc.us
+  Type:  TXT
+  Value: v=spf1 include:_spf.google.com -all
+(replace the include with your actual provider — Microsoft 365 is include:spf.protection.outlook.com)
+
+=== n-ccs.org ===
+Step 1 (today, safe, breaks nothing) — turn on monitoring:
+  Host:  _dmarc.n-ccs.org
+  Type:  TXT
+  Value: v=DMARC1; p=none; rua=mailto:dmarc-reports@n-ccs.org; fo=1
+
+Step 2 (after 2-4 weeks of reading reports, once all legitimate senders pass):
+  Value: v=DMARC1; p=quarantine; pct=100; rua=mailto:dmarc-reports@n-ccs.org; fo=1
+
+Step 3 (final, recommended by CISA for government domains):
+  Value: v=DMARC1; p=reject; pct=100; rua=mailto:dmarc-reports@n-ccs.org; fo=1
+
+If there is no SPF record, add one listing your real mail servers, for example
+for Google Workspace:
+  Host:  n-ccs.org
+  Type:  TXT
+  Value: v=spf1 include:_spf.google.com -all
+(replace the include with your actual provider — Microsoft 365 is include:spf.protection.outlook.com)
+
+=== northampton.k12.nc.us ===
+Step 1 (today, safe, breaks nothing) — turn on monitoring:
+  Host:  _dmarc.northampton.k12.nc.us
+  Type:  TXT
+  Value: v=DMARC1; p=none; rua=mailto:dmarc-reports@northampton.k12.nc.us; fo=1
+
+Step 2 (after 2-4 weeks of reading reports, once all legitimate senders pass):
+  Value: v=DMARC1; p=quarantine; pct=100; rua=mailto:dmarc-reports@northampton.k12.nc.us; fo=1
+
+Step 3 (final, recommended by CISA for government domains):
+  Value: v=DMARC1; p=reject; pct=100; rua=mailto:dmarc-reports@northampton.k12.nc.us; fo=1
+
+If there is no SPF record, add one listing your real mail servers, for example
+for Google Workspace:
+  Host:  northampton.k12.nc.us
+  Type:  TXT
+  Value: v=spf1 include:_spf.google.com -all
+(replace the include with your actual provider — Microsoft 365 is include:spf.protection.outlook.com)
+
+=== orange.k12.nc.us ===
+Step 1 (today, safe, breaks nothing) — turn on monitoring:
+  Host:  _dmarc.orange.k12.nc.us
+  Type:  TXT
+  Value: v=DMARC1; p=none; rua=mailto:dmarc-reports@orange.k12.nc.us; fo=1
+
+Step 2 (after 2-4 weeks of reading reports, once all legitimate senders pass):
+  Value: v=DMARC1; p=quarantine; pct=100; rua=mailto:dmarc-reports@orange.k12.nc.us; fo=1
+
+Step 3 (final, recommended by CISA for government domains):
+  Value: v=DMARC1; p=reject; pct=100; rua=mailto:dmarc-reports@orange.k12.nc.us; fo=1
+
+If there is no SPF record, add one listing your real mail servers, for example
+for Google Workspace:
+  Host:  orange.k12.nc.us
+  Type:  TXT
+  Value: v=spf1 include:_spf.google.com -all
+(replace the include with your actual provider — Microsoft 365 is include:spf.protection.outlook.com)
+
+=== pamlicoschools.org ===
+Step 1 (today, safe, breaks nothing) — turn on monitoring:
+  Host:  _dmarc.pamlicoschools.org
+  Type:  TXT
+  Value: v=DMARC1; p=none; rua=mailto:dmarc-reports@pamlicoschools.org; fo=1
+
+Step 2 (after 2-4 weeks of reading reports, once all legitimate senders pass):
+  Value: v=DMARC1; p=quarantine; pct=100; rua=mailto:dmarc-reports@pamlicoschools.org; fo=1
+
+Step 3 (final, recommended by CISA for government domains):
+  Value: v=DMARC1; p=reject; pct=100; rua=mailto:dmarc-reports@pamlicoschools.org; fo=1
+
+If there is no SPF record, add one listing your real mail servers, for example
+for Google Workspace:
+  Host:  pamlicoschools.org
+  Type:  TXT
+  Value: v=spf1 include:_spf.google.com -all
+(replace the include with your actual provider — Microsoft 365 is include:spf.protection.outlook.com)
+
+=== richmond.k12.nc.us ===
+Step 1 (today, safe, breaks nothing) — turn on monitoring:
+  Host:  _dmarc.richmond.k12.nc.us
+  Type:  TXT
+  Value: v=DMARC1; p=none; rua=mailto:dmarc-reports@richmond.k12.nc.us; fo=1
+
+Step 2 (after 2-4 weeks of reading reports, once all legitimate senders pass):
+  Value: v=DMARC1; p=quarantine; pct=100; rua=mailto:dmarc-reports@richmond.k12.nc.us; fo=1
+
+Step 3 (final, recommended by CISA for government domains):
+  Value: v=DMARC1; p=reject; pct=100; rua=mailto:dmarc-reports@richmond.k12.nc.us; fo=1
+
+If there is no SPF record, add one listing your real mail servers, for example
+for Google Workspace:
+  Host:  richmond.k12.nc.us
+  Type:  TXT
+  Value: v=spf1 include:_spf.google.com -all
+(replace the include with your actual provider — Microsoft 365 is include:spf.protection.outlook.com)
+
+=== swainmail.org ===
+Step 1 (today, safe, breaks nothing) — turn on monitoring:
+  Host:  _dmarc.swainmail.org
+  Type:  TXT
+  Value: v=DMARC1; p=none; rua=mailto:dmarc-reports@swainmail.org; fo=1
+
+Step 2 (after 2-4 weeks of reading reports, once all legitimate senders pass):
+  Value: v=DMARC1; p=quarantine; pct=100; rua=mailto:dmarc-reports@swainmail.org; fo=1
+
+Step 3 (final, recommended by CISA for government domains):
+  Value: v=DMARC1; p=reject; pct=100; rua=mailto:dmarc-reports@swainmail.org; fo=1
+
+If there is no SPF record, add one listing your real mail servers, for example
+for Google Workspace:
+  Host:  swainmail.org
+  Type:  TXT
+  Value: v=spf1 include:_spf.google.com -all
+(replace the include with your actual provider — Microsoft 365 is include:spf.protection.outlook.com)
+
+=== tcs.k12.nc.us ===
+Step 1 (today, safe, breaks nothing) — turn on monitoring:
+  Host:  _dmarc.tcs.k12.nc.us
+  Type:  TXT
+  Value: v=DMARC1; p=none; rua=mailto:dmarc-reports@tcs.k12.nc.us; fo=1
+
+Step 2 (after 2-4 weeks of reading reports, once all legitimate senders pass):
+  Value: v=DMARC1; p=quarantine; pct=100; rua=mailto:dmarc-reports@tcs.k12.nc.us; fo=1
+
+Step 3 (final, recommended by CISA for government domains):
+  Value: v=DMARC1; p=reject; pct=100; rua=mailto:dmarc-reports@tcs.k12.nc.us; fo=1
+
+If there is no SPF record, add one listing your real mail servers, for example
+for Google Workspace:
+  Host:  tcs.k12.nc.us
+  Type:  TXT
+  Value: v=spf1 include:_spf.google.com -all
+(replace the include with your actual provider — Microsoft 365 is include:spf.protection.outlook.com)
+
+=== tyrrell.k12.nc.us ===
+Step 1 (today, safe, breaks nothing) — turn on monitoring:
+  Host:  _dmarc.tyrrell.k12.nc.us
+  Type:  TXT
+  Value: v=DMARC1; p=none; rua=mailto:dmarc-reports@tyrrell.k12.nc.us; fo=1
+
+Step 2 (after 2-4 weeks of reading reports, once all legitimate senders pass):
+  Value: v=DMARC1; p=quarantine; pct=100; rua=mailto:dmarc-reports@tyrrell.k12.nc.us; fo=1
+
+Step 3 (final, recommended by CISA for government domains):
+  Value: v=DMARC1; p=reject; pct=100; rua=mailto:dmarc-reports@tyrrell.k12.nc.us; fo=1
+
+If there is no SPF record, add one listing your real mail servers, for example
+for Google Workspace:
+  Host:  tyrrell.k12.nc.us
+  Type:  TXT
+  Value: v=spf1 include:_spf.google.com -all
+(replace the include with your actual provider — Microsoft 365 is include:spf.protection.outlook.com)
+
+=== wcpss.net ===
+Step 1 (today, safe, breaks nothing) — turn on monitoring:
+  Host:  _dmarc.wcpss.net
+  Type:  TXT
+  Value: v=DMARC1; p=none; rua=mailto:dmarc-reports@wcpss.net; fo=1
+
+Step 2 (after 2-4 weeks of reading reports, once all legitimate senders pass):
+  Value: v=DMARC1; p=quarantine; pct=100; rua=mailto:dmarc-reports@wcpss.net; fo=1
+
+Step 3 (final, recommended by CISA for government domains):
+  Value: v=DMARC1; p=reject; pct=100; rua=mailto:dmarc-reports@wcpss.net; fo=1
+
+If there is no SPF record, add one listing your real mail servers, for example
+for Google Workspace:
+  Host:  wcpss.net
+  Type:  TXT
+  Value: v=spf1 include:_spf.google.com -all
+(replace the include with your actual provider — Microsoft 365 is include:spf.protection.outlook.com)
+
+=== warrenk12nc.org ===
+Step 1 (today, safe, breaks nothing) — turn on monitoring:
+  Host:  _dmarc.warrenk12nc.org
+  Type:  TXT
+  Value: v=DMARC1; p=none; rua=mailto:dmarc-reports@warrenk12nc.org; fo=1
+
+Step 2 (after 2-4 weeks of reading reports, once all legitimate senders pass):
+  Value: v=DMARC1; p=quarantine; pct=100; rua=mailto:dmarc-reports@warrenk12nc.org; fo=1
+
+Step 3 (final, recommended by CISA for government domains):
+  Value: v=DMARC1; p=reject; pct=100; rua=mailto:dmarc-reports@warrenk12nc.org; fo=1
+
+If there is no SPF record, add one listing your real mail servers, for example
+for Google Workspace:
+  Host:  warrenk12nc.org
+  Type:  TXT
+  Value: v=spf1 include:_spf.google.com -all
+(replace the include with your actual provider — Microsoft 365 is include:spf.protection.outlook.com)
+
+=== wcsnc.org ===
+Step 1 (today, safe, breaks nothing) — turn on monitoring:
+  Host:  _dmarc.wcsnc.org
+  Type:  TXT
+  Value: v=DMARC1; p=none; rua=mailto:dmarc-reports@wcsnc.org; fo=1
+
+Step 2 (after 2-4 weeks of reading reports, once all legitimate senders pass):
+  Value: v=DMARC1; p=quarantine; pct=100; rua=mailto:dmarc-reports@wcsnc.org; fo=1
+
+Step 3 (final, recommended by CISA for government domains):
+  Value: v=DMARC1; p=reject; pct=100; rua=mailto:dmarc-reports@wcsnc.org; fo=1
+
+If there is no SPF record, add one listing your real mail servers, for example
+for Google Workspace:
+  Host:  wcsnc.org
+  Type:  TXT
+  Value: v=spf1 include:_spf.google.com -all
+(replace the include with your actual provider — Microsoft 365 is include:spf.protection.outlook.com)
+
+=== weldoncityschools.org ===
+Step 1 (today, safe, breaks nothing) — turn on monitoring:
+  Host:  _dmarc.weldoncityschools.org
+  Type:  TXT
+  Value: v=DMARC1; p=none; rua=mailto:dmarc-reports@weldoncityschools.org; fo=1
+
+Step 2 (after 2-4 weeks of reading reports, once all legitimate senders pass):
+  Value: v=DMARC1; p=quarantine; pct=100; rua=mailto:dmarc-reports@weldoncityschools.org; fo=1
+
+Step 3 (final, recommended by CISA for government domains):
+  Value: v=DMARC1; p=reject; pct=100; rua=mailto:dmarc-reports@weldoncityschools.org; fo=1
+
+If there is no SPF record, add one listing your real mail servers, for example
+for Google Workspace:
+  Host:  weldoncityschools.org
+  Type:  TXT
+  Value: v=spf1 include:_spf.google.com -all
+(replace the include with your actual provider — Microsoft 365 is include:spf.protection.outlook.com)
+
+=== whiteville.k12.nc.us ===
+Step 1 (today, safe, breaks nothing) — turn on monitoring:
+  Host:  _dmarc.whiteville.k12.nc.us
+  Type:  TXT
+  Value: v=DMARC1; p=none; rua=mailto:dmarc-reports@whiteville.k12.nc.us; fo=1
+
+Step 2 (after 2-4 weeks of reading reports, once all legitimate senders pass):
+  Value: v=DMARC1; p=quarantine; pct=100; rua=mailto:dmarc-reports@whiteville.k12.nc.us; fo=1
+
+Step 3 (final, recommended by CISA for government domains):
+  Value: v=DMARC1; p=reject; pct=100; rua=mailto:dmarc-reports@whiteville.k12.nc.us; fo=1
+
+If there is no SPF record, add one listing your real mail servers, for example
+for Google Workspace:
+  Host:  whiteville.k12.nc.us
+  Type:  TXT
+  Value: v=spf1 include:_spf.google.com -all
+(replace the include with your actual provider — Microsoft 365 is include:spf.protection.outlook.com)
